@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography, Divider, IconButton} from '@material-ui/core'
+import { Grid, List, TextField, ListItem, ListItemAvatar, Avatar, ListItemText, Typography, Divider, IconButton} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import {useStateValue} from '../../hoc/StateProvider'
 import { Delete } from '@material-ui/icons'
@@ -18,9 +18,11 @@ const useStyles = makeStyles({
 
 
 function CheckoutProducts({id, title, price, description, url}) {
-
+  
   const [{cart}, dispatch] = useStateValue();
 
+  const classes = useStyles()
+  
   const removeProduct = () => {
     dispatch({
       type: 'REMOVE_FROM_CART',
@@ -28,7 +30,9 @@ function CheckoutProducts({id, title, price, description, url}) {
     })
   }
 
-  const classes = useStyles()
+  // const increaseWeight = () => {
+  //   for(i)
+  // }
 
 
   return (
@@ -70,28 +74,3 @@ function CheckoutProducts({id, title, price, description, url}) {
 
 export default CheckoutProducts
 
-{/* <ListItemText
-        primary={
-          <React.Fragment>
-            <Typography
-            variant="h6"
-            
-            >
-            {title}
-            </Typography>
-            <Typography
-              component="span"
-              variant="body1"
-              className={classes.inline}
-              color="textPrimary"
-            >
-              $ {price}
-            </Typography>
-            {/* <Typography
-            variant="subtitle1"
-            >
-            {description}
-            </Typography>  */}
-          // </React.Fragment>
-        // }
-      // /> */}

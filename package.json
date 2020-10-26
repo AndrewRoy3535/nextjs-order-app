@@ -10,7 +10,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-currency-format": "^1.0.0",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-word-limit": "^1.0.1"
   },
   "scripts": {
     "dev": "next",

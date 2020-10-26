@@ -1,4 +1,4 @@
-# Next.js Order-App(e-commerce)
+# Order-App(e-commerce)
 
 ## How to use
 
